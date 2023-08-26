@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+
+<!--
+WHAT'S THIS?
+This is the landing page template.
+
+INSTRUCTIONS
+
+1) Leave most of what's inside the <head> ... </head> tags as is.  You can change the title and add a description.
+
+2) You'll do most of your work between the <body> ... </body> tags.  That's all site visitors will see.  You're free to add/remove/change HTML elements to your liking.
+
+3) Your styles are located in the external CSS file ('landing-styles.css'), which I've placed in the 'lib/css' folder.  You're free to add/remove/change styles, as well.
+
+4) HTML files and CSS files can both be edited using the same editor (e.g., NotePad++).  If you're a Mac user and would like advice on choosing an editor, see me.  Or just perform a search.  You'll find several free tools available for download on the web.
+
+5) Your 'thank-you' page, 'chat' and 'comment' pages are all located in the 'lib/php' folder.  I've included instructions at the top of each of those files to assist you in their use.  (You're not required to use a chat window or comment form on your landing page, but I've included them in this template, should you want to use them.)
+
+BACKUPS/FILEZILLA
+
+1) Create a folder called 'backups' on your computer.  Back up your work regularly to this folder (i.e., copy this entire folder to the backups folder).  
+
+2)  You also want to copy the entire folder to your file area on Barney using FileZilla.  As you progress, it's okay to overwrite the files on Barney with newer versions.  That's where you should keep your latest and greatest.  (If you need a refresher on using FileZilla, ask me, and I'll take you through it.)
+
+HAVE FUN !!!
+-->
+
+
+<head>
+
+<!-- TITLE -->
+<title>ADD YOUR TITLE HERE</title>
+
+<!-- META DATA -->
+<meta name="description" content="ADD YOUR DESCRIPTION HERE">
+<meta name= "keywords"  content="">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- FONTS -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300,400,700,800|Poiret+One|Merriweather|Dokdo">
+
+<!-- CLASSES -->
+<link rel="stylesheet" href="lib/css/landing-styles.css">
+<link rel="stylesheet" href="lib/css/chat-styles.css">
+</head>
+
+<!-- HTML STARTS HERE -->
+<body>
+
+<!-- HEADER CONTAINS HERO IMAGE, IDENTITY (LOGO/COMPANY) AND CONTENT OFFER FORM -->
+<header class="hero">
+
+<!-- BRANDMARK AND MESSAGING -->
+<div class="identity over-top-left">
+	<header>
+	<i class="fa fa-envira"></i>
+	<h1>Poiret</h1>
+	<p>Followed by a Slogan</p>
+	</header>
+</div>
+
+<!-- CONTENT OFFER FORM -->
+<div class="offer over-center">
+	<h1>Receive your free ebook!</h1>
+	<form name=offer action="lib/php/thanks.php" method=post>
+	<p><input type=text name=firstname placeholder="First Name" required></p>
+	<p><input type=text name=lastname placeholder="Last Name" required></p>
+	<p><input type=email name=email placeholder="Email" required></p>
+	<p><button type=submit>Get It Now</button></p>
+	</form>
+</div>
+</header>
+<!-- end HEADER section -->
+
+<!-- INTERSTICE CONTAINS EVERYTHING BETWEEN HEADER AND FOOTER.  -->
+<section class="interstice">
+
+<!-- blog post snippet with link to full post (optional)-->
+<article>
+	<!-- snippet heading -->
+	<header>
+	<h1>Lorem Ipsum Dolor Sit Amet</h1>
+	<hr>
+	<div class="byline">
+	<img class="avatar-blog" src="lib/img/theme/avatar-blogger.jpg" alt="Ian Dessein">
+	<p>Ian Dessein &bull; <time>April 17, 2019</time></p>
+	</div>
+	</header>
+	<!-- snippet banner -->
+	<img class="lead-img" src="lib/img/theme/green-18.jpg" alt="Lorem Ipsum" title="Lorem Ipsum">
+	<!-- snippet body -->
+	<p>
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Duis autem <a href="https://www.wordstream.com/blog/ws/2017/10/23/cornerstone-content-guide" target="_blank" title="7-Step Guide to Creating Amazing Cornerstone Content">7-Step Guide to Creating Amazing Cornerstone Content</a>, vel eum iriure dolor in vulputate, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum... <b><a href="https://alienwp.com/cornerstone-content/" target="_blank" title="Cornerstone Content">READ FULL ARTICLE &nbsp;<i class="fa fa-arrow-circle-right"></i></a></b>
+	</p>
+</article>
+<!-- call-to-action -->
+<h3 class="cta-download"><a href="#">Download eBook</a></h3>
+
+<!-- another blog post snippet with link to full post (optional) -->
+<article>
+	<!-- snippet heading -->
+	<header>
+	<h1>Praesent Tincidunt Sed Tellus Ut Rutrum</h1>
+	<hr>
+	<div class="byline">
+	<img class="avatar-blog" src="lib/img/theme/avatar-blogger.jpg" alt="Ian Dessein">
+	<p>Ian Dessein &bull; <time>April 16, 2019</time></p>
+	</div>
+	</header>
+	<!-- snippet banner -->
+	<img class="lead-img" src="lib/img/theme/green-2.jpg" alt="Lorem Ipsum" title="Lorem Ipsum">
+	<!-- snippet body -->
+	<p>
+	Duis autem, vel eum iriure dolor in vulputate, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Mauris neque quam, <a href="https://copyblogger.com/how-to-create-cornerstone-content-that-google-loves/" target="_blank" title="How to Create Content that Google Loves">How to Create Content that Google Loves</a>. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Phasellus sed ultricies mi non congue ullam corper... <b><a href="https://copyblogger.com/landing-pages/" target="_blank" title="Landing Pages">READ FULL ARTICLE &nbsp;<i class="fa fa-arrow-circle-right"></i></a></b>
+	</p>
+</article>
+<!-- call-to-action -->
+<h3 class="cta-demo"><a href="#footer">Request Demo</a></h3>
+
+</section>
+<!-- end INTERSTICE section -->
+
+<!-- FOOTER INCLUDES ABOUT TEXT, COMMENT FORM, SOCIAL LINKS, CONTACT INFO AND COPYRIGHT -->
+<footer id="footer">
+
+<!-- about text -->
+<section id="about" class="w-4 w-12-tab">
+	<header><h1>about Poiret</h1></header>
+	<p><strong class="bright">Poiret</strong> is just the name of this font.  So, lorem ipsum et cetera duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+</section>
+
+<!-- comment form -->
+<section id="comments" class="w-4 w-6-tab">
+	<header><h1>Comments?</h1></header>
+	<form id="formComment" name="comment" action="lib/php/comment.php" method="post">
+		<div>
+		<p><input id="fName" name="visitor" type="text" placeholder="Name"></p>
+		<p><input id="fCompany" name="company" type="text" placeholder="Company"></p>
+		<p><input id="fEmail" name="email" type="email" placeholder="Email"></p>
+		<p><input id="fPhone" name="phone" type="tel" placeholder="Phone"></p>
+		<p><textarea id="fMessage" name="message" rows="6" placeholder="Message"></textarea></p>
+		<p><button id="fSubmit" type="submit" class="shadow">send</button></p>
+		</div>
+	</form>
+</section>
+
+<!-- social links and contact info -->
+<div id="locations" class="w-4 w-6-tab">
+	<section id="social">
+		<header><h1>find us</h1></header>
+		<a><i class="fa fa-twitter-square"></i></a><a><i class="fa fa-facebook-square"></i></a><a><i class="fa fa-instagram"></i></a><a><i class="fa fa-linkedin-square"></i></a><a><i class="fa fa-comments"></i></a>
+	</section>
+	<section id="contact">
+		<header><h1>contact</h1></header>
+		<p  id="address"><i class="fa fa-map-marker"></i><a href="https://goo.gl/maps/6cnNvTqgTnM2Dged6" target="_blank"><span>502 E Boone Ave<br>Spokane, WA 99258</span></a></p>
+		<p><i class="fa fa-envelope"></i><a href="mailto:whatev@notreally.com"><a>info@poiret.com</a></p>
+		<p><i class="fa fa-phone"></i><a href="tel:+15551234567"><a>1-555-123-4567</a></p>
+	</section>
+</div>
+
+<!-- copyright -->
+<section id="copyright" class="w-12 w-12-tab"><!--  writeFooterInfo() inserts text here  --></section>
+
+</footer>
+<!-- end FOOTER section -->
+
+<!-- CHAT WINDOW (To deploy, see note in script section below.) -->
+<button id="chat-button" class="card-chat-button" onclick="openChat()">Live Chat</button>
+<div class="card-for-chat" id="chat">
+<header>
+	<img src="lib/img/theme/brandmark.png" class="avatar round float-left shadow">
+	<h1 class="float-left dokdo em2 line-h-2 limegreen">&nbsp;Totally chat!</h1>
+</header>
+<form method="post" action="lib/php/chat.php" class="form white-bg">
+	<label for="message">Message</label>
+	<textarea placeholder="Type message..." name="message" required></textarea>
+	<button type="submit" class="card-send-button">Send</button>
+	<button type="button" class="card-close-button" onclick="closeChat()">Close</button>
+</form>
+</div>
+
+
+<!--  NO HTML BELOW THIS LINE.  THE REST IS JAVASCRIPT -->
+
+<script>
+
+// Inserts copyright text into the footer
+function writeFooterInfo()
+{
+	var year = new Date();
+	var copyright = document.getElementById("copyright");
+	copyright.innerHTML = "<p>&copy; " + year.getFullYear() + " Poiret.  All rights reserved.</p>";
+}
+writeFooterInfo();
+
+// Next three functions control the chat window (if in use)
+// Note: To deploy the chat window, remove the comment tags // from both lines above the closing script tag (below)
+var timer;
+function openChat() {
+	clearTimeout(timer);
+	document.getElementById("chat").style.display = "block";
+}
+function closeChat() {
+	document.getElementById("chat").style.display = "none";
+}
+function autoChat() {
+	timer = setTimeout(openChat, 4500);
+}
+//document.getElementById("chat-button").style.display = "block";
+//autoChat();
+
+</script>
+
+</body>
+</html>

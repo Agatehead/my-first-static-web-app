@@ -1,0 +1,93 @@
+/*  Cascading Style Sheet */
+
+
+/*
+WHAT'S THIS?
+These styles control the appearance of the live chat window (if in use).
+*/
+
+
+#chat-button {display: none;}
+
+.card-chat-button {
+	position: fixed;
+	bottom: 1.5em;
+	right: 1.75em;
+	width: 280px;
+	opacity: 0.8;
+	color: darkgoldenrod;
+	background-color: palegoldenrod;
+	border: none;
+	padding: 16px 20px;
+	cursor: pointer;
+}
+@keyframes fly-from-bottom {
+	from {bottom: -5%; opacity:0;}
+	to {bottom: 0%; opacity:1;}
+}
+.card-for-chat {
+	display: none;
+	position: fixed;
+	bottom: 0px;
+	right: 15px;
+	border: 3px solid #f1f1f1;
+	z-index: 10;
+	animation-name: fly-from-bottom;
+	animation-duration: 1s;
+	overflow: hidden;
+}
+.form {
+	max-width: 300px;
+	padding: 10px;
+}
+.form textarea {
+	width: 100%;
+	padding:15px;
+	margin: 5px 0px 20px 0px;
+	border: 1px solid palegoldenrod;
+	border-radius: 1.25em;
+	background-color: lightgoldenrodyellow;
+	resize: none;
+	min-height: 200px;
+}
+.form label {font-weight: bold;}
+.form textarea:focus {
+	background-color: palegoldenrod;
+	ouline: none;
+}
+.card-send-button, .card-close-button {
+	width: 100%;
+	opacity: 0.8;
+	color: #fff;
+	border: none;
+	padding: 16px 20px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.card-send-button {background-color: rgb(76, 175, 80);}
+.card-close-button {
+	color: darkgoldenrod; 
+	background-color: palegoldenrod;
+}
+
+.avatar {
+	width: 3.5em; 
+	height: 3.5em; 
+	border: 1px solid #808080;
+}
+.round {border-radius: 50%;}
+.float-left {float:left;}
+.shadow {box-shadow: 2px 4px 6px rgba(0,0,0,0.25);}
+.em2 {font-size: 2em;}
+.line-h-2 {
+	line-height: 2em; 
+	margin-top: 0px;
+}
+.dokdo {font-family: "Dokdo";}
+.white-bg {background-color: #fff;}
+.steelblue-bg {background-color: steelblue;}
+.lightslategray-bg {background-color: lightslategray;}
+.slategray-bg {background-color: slategray;}
+.steelblue {color: steelblue;}
+.card-chat-button:hover, .card-send-button:hover, .card-close-button:hover {opacity: 1;}
+

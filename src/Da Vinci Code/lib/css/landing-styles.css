@@ -1,0 +1,353 @@
+/* Cascading Style Sheet */
+
+
+/*
+WHAT'S THIS?
+These styles control the appearance of the landing page.
+(If you are using a chat window, its styles are in 'lib/css/chat-styles.css'.)
+
+NEED HELP?
+1) Here's a CSS overview: https://www.w3schools.com/css/default.asp 
+2) Here's a reference that shows you how to use every CSS property there is: https://www.w3schools.com/cssref/default.asp 
+3) Want to be a CSS ninja?  Then familiarize yourself with CSS selectors, too: https://www.w3schools.com/cssref/css_selectors.asp
+4) Ask ME.  (Especially when you're stuck.)  I'm happy to assist you.
+*/
+
+
+/* GLOBAL SETTINGS */
+
+body, html {height:100%;}
+body {
+	margin: 0;
+}
+:not(h1) {font-size: 16px;}
+*  {
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+.course::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* GRID */
+
+/*  phone  */
+[class^="w-"] { 
+	width: 100%;
+	float: left;
+}
+
+/*  tablet  */
+@media screen and (min-width: 769px) {
+	.w-1-tab {width: 8.33%;}
+	.w-2-tab {width: 16.66%;}
+	.w-3-tab {width: 25%;}
+	.w-4-tab {width: 33.33%;}
+	.w-5-tab {width: 41.66%;}
+	.w-6-tab {width: 50%;}
+	.w-7-tab {width: 58.33%;}
+	.w-8-tab {width: 66.66%;}
+	.w-9-tab {width: 75%;}
+	.w-10-tab {width: 83.33%;}
+	.w-11-tab {width: 91.66%;}
+	.w-12-tab {width: 100%;}
+}
+
+/*  laptop, desktop  */
+@media screen and (min-width: 1025px) {
+	.w-1 {width: 8.33%;}
+	.w-2 {width: 16.66%;}
+	.w-3 {width: 25%;}
+	.w-4 {width: 33.33%;}
+	.w-5 {width: 41.66%;}
+	.w-6 {width: 50%;}
+	.w-7 {width: 58.33%;}
+	.w-8 {width: 66.66%;}
+	.w-9 {width: 75%;}
+	.w-10 {width: 83.33%;}
+	.w-11 {width: 91.66%;}
+	.w-12 {width: 100%;}
+}
+
+/* BEHAVIORS */
+
+a, button {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+button {
+	width: 100%;
+	color: inherit;
+	border: 0.1em solid rgba(0,0,0,0);
+	border-radius: 1em;
+	padding: 0.125em 1em;
+}
+a:hover, button:hover, .cta-download a:hover,  .cta-demo a:hover, #formComment button:hover {
+	opacity: 0.6;
+}
+input, textarea {
+	padding: 0.25em 1em; 
+}
+input {
+	width: 100%;
+	color: inherit;
+	background-color: rgba(0,0,0,0.2);
+	border: 0.1em solid whitesmoke;
+	border-radius: 1em;
+}
+input:focus {
+	background-color: rgba(0,0,0,0.5);
+}
+
+/* CSS CLASSES */
+
+/* Header Section */
+
+.hero {
+	position: relative;
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-image: url("../../lib/img/theme/leaf.jpg"); 
+	min-height: 90%;
+}
+.identity {
+	color: white;
+	text-shadow: 2px 4px 4px rgba(0,0,0,0.2);
+}
+.identity {
+	animation-name: fly-from-left;
+	animation-duration: 1s;
+	overflow: hidden;
+}
+@keyframes fly-from-left {
+	from {left: 0%; opacity:0;}
+	to {left: 4%; opacity:1;}
+}
+.identity p {
+	margin-top: 0.25em; 
+	margin-left: 5em;
+}
+.identity i {
+	color: lime;
+	font-size: 4em; 
+	display: table-cell; 
+	vertical-align: middle;
+	padding-right: 10px;
+}
+.identity h1 {
+	font-family: "Poiret One";
+	font-size: 5em; 
+	display: table-cell; 
+	vertical-align: middle;
+}
+.offer {
+	max-width: 410px;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	animation-name: zoom;
+	animation-duration: 1s;
+	overflow:hidden;
+}
+@keyframes zoom {
+	from {transform: scale(0.1)}
+	to {transform: scale(1)}
+}
+.offer h1 {font-size: 2em;}
+.offer button {
+	background-color: lime;
+	font-weight: 700;
+	font-size: 1.25em;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.25);
+}
+@media screen and (min-width: 360px) {
+	.identity i {font-size: 5em;}
+	.identity h1 {font-size: 6em;}
+	.identity p {margin-left: 6em;}
+	.offer h1 {font-size: 2em;}
+}
+.over-top-left {
+	position: absolute;
+	top: 24px;
+	left: 4%;
+	transform: translate(0%, -0px);
+}
+.over-center {
+	margin: auto;
+	padding-top: 180px;
+	text-align:center;
+}
+
+/* Interstice Section */
+
+.interstice {
+	padding: 3em 0px;
+}
+.interstice::after, footer::after, #address::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+article {
+	margin: auto; 
+	max-width: 640px; 
+	/* overflow:hidden necessary for .lead-img min-width */
+	overflow: hidden;
+}
+article * {
+	font-family: "Lato", sans-serif;
+}
+article header {
+	text-align: center; 
+	margin-bottom: 1rem;
+}
+article p {
+	line-height: 1.66em; 
+	color: #54575d;
+}
+@media screen and (max-width: 700px) {
+	article header, article p {
+		margin-left: 0.5rem; 
+		margin-right: 0.5rem;
+	}
+}
+article h1 {
+	font-size: 2.25em; 
+	margin-bottom: 1.5rem;
+}
+article a {
+	text-decoration: none; 
+	color: limegreen; 
+	filter: saturate(170%) brightness(80%);
+}
+article hr {
+	width: 75px; 
+	height: 4px; 
+	background-color: lime; 
+	border: 0;
+}
+.lead-img {
+	position: relative; 
+	width: 100%; 
+	margin: 2em auto; 
+	min-width: 480px;
+}
+.byline {
+	display: table; 
+	margin: auto; 
+	text-align: center;
+}
+.byline p, .byline img {
+	display: table-cell; 
+	vertical-align: middle; 
+	margin: 0.25em 0.5em;
+}
+.byline p , .byline time {
+	font-weight: bolder; 
+	font-size: 0.9em;
+}
+.avatar-blog {
+	width: 2em; 
+	height: 2em; 
+	border-radius: 50%;
+}
+.cta-download, .cta-demo {
+	margin: 1em auto 3em auto; 
+	text-align: center;
+}
+.cta-download a, .cta-demo a {
+	cursor: pointer;
+	border-radius: 1.25em;
+	padding: 0.5em 1.25em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.cta-download a {
+	color: white;
+	background-color: limegreen;
+	text-shadow: 2px 4px 4px rgba(0,0,0,0.2);
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.25);
+}
+.cta-demo a {
+	color: green;
+	background-color: greenyellow;
+	border: solid green;
+	text-shadow: 2px 4px 4px rgba(0,0,0,0.2);
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.25);
+	filter: saturate(90%);
+}
+
+/* Footer Section */
+
+footer {
+	color: #fff;
+	text-shadow: 2px 4px 4px rgba(0,0,0,0.2);
+	background-image: linear-gradient(0deg, rgb(107, 142, 35), rgb(154, 205, 50, 0.8));
+}
+footer a {color: gold;}
+#about, #comments, #locations {padding: 0px 2em;}
+#footer h1 {
+	font-family: "Poiret One"; 
+	font-size: 3em; 
+	margin-bottom: 1.5rem; 
+	padding: 0px; 
+	color: white; 
+	text-transform: capitalize;
+}
+#social i {
+	color: gold;
+	padding-right: 10px;
+	font-size: 34px;
+}
+#contact i {
+	padding-right: 16px;
+	font-size: 20px;
+	width: 36px;
+}
+#contact a {font-weight: bold;}
+#address i, #address span {
+	display: inline-block; 
+	float:left;
+}
+#address i {padding-top: 8px;}
+
+/*  comment form  */
+#formComment input, #formComment textarea {
+	background-color: lightyellow;  
+	border: 1px solid yellowgreen;
+	color: #000;
+	width: 100%;
+}
+#formComment textarea {
+	border-radius: 1em;
+}
+#formComment ::placeholder {
+	color: olivedrab;
+}
+#formComment input:focus, #formComment textarea:focus {
+	background-color: khaki;  
+	outline: none;
+}
+#formComment button {
+	border: 1px solid gold;
+	padding: 0.25em 1em;
+	text-transform: uppercase;
+	background-color: gold;
+	cursor: pointer;
+}
+
+/*  copyright  */
+#copyright {
+	padding: 5rem 0px 1.5rem 0px; 
+	text-align:center; 
+	white-space:nowrap;
+}
+
+

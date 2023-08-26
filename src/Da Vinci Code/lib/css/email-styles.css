@@ -1,0 +1,171 @@
+/* Cascading Style Sheet */
+
+
+/* 
+WHAT'S THIS?
+These styles control the appearance of the email.
+
+NEED HELP?
+1) Here's a CSS overview: https://www.w3schools.com/css/default.asp 
+2) Here's a reference that shows you how to use every CSS property there is: https://www.w3schools.com/cssref/default.asp 
+3) Want to be a CSS ninja?  Then familiarize yourself with CSS selectors, too: https://www.w3schools.com/cssref/css_selectors.asp
+4) Ask ME.  (Especially when you're stuck.)  I'm happy to assist you.
+*/
+
+
+/* GLOBAL SETTINGS */
+
+body {margin: 0px;}
+* {
+	box-sizing: border-box;
+	font-family: "Lato", sans-serif; 
+	font-size:16px;
+}
+[class^="w-"] { 
+	width: 100%;
+	float: left;
+}
+@media screen and (min-width: 481px) {
+	.w-6 {width: 50%;}
+}
+
+/* HTML TAGS */
+
+button, a {cursor: pointer;}
+a {
+	color: limegreen;
+	text-decoration: none;
+}
+p {
+	padding: 0px 8px; 
+	line-height: 1.5;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+span {
+	font-size: smaller; 
+	font-weight: normal;
+}
+hr {
+	width: 80%; 
+	height: 1px; 
+	border: 0; 
+	background-color: lime; 
+	margin: 1.5em auto;
+}
+section::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+section {
+	margin: auto; 
+	max-width: 600px; 
+	text-align: center;
+}
+header, footer {
+	width: 100%;
+	background-color: honeydew;
+}
+header {margin-bottom: 1.5em;}
+footer {padding: 1em 0px;}
+footer p {font-size: 0.66em;}
+footer p a {font-size: inherit;}
+h1 {
+	font-family: "Poiret One"; 
+	margin-top: 1rem; 
+	margin-bottom: 1.25rem;
+}
+h2 {font-size: 1.5em;}
+h3 {margin-top: 2.5em;}
+h3 a { padding: 0.75em 1.25em;}
+ 
+/* CSS CLASSES */
+
+.chrome p {
+	float: left; 
+	width: 50%;
+	filter:brightness(80%);
+	font-weight: 700;
+	text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+.chrome p:first-child {text-align: left;}
+.chrome p:nth-child(2) {text-align: right;}
+.identity {
+	display: table; 
+	margin: auto auto 1rem auto; 
+	text-align: center;
+}
+.identity i, .identity h1 {
+	display: table-cell; 
+	vertical-align: middle;
+}
+.identity i {
+	color: lime; 
+	font-size: 4em;
+}
+.identity h1 {
+	font-size: 5em; 
+	padding: 0px 20px 0px 10px;
+}
+.pitch h1 {
+	font-weight: 300;
+	font-size: 3em;
+}
+.pitch p {margin: 0px;}
+.cta {padding: 0.5em 0px 1em 0px;}
+.cta h3 a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+	padding: 0.5em 1.25em;
+	background-color: limegreen;
+	border-radius: 1.25em;
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.25);
+	cursor: pointer;
+}
+.cta h3 a:hover, .card button:hover, a:hover {
+	opacity: 0.6;
+}
+.container {
+	float: left; 
+	padding: 1em;
+}
+.card {
+	padding: 0px;
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.25);
+}
+.card button {
+	color: #fff;
+	font-size:18px;
+	border: none;
+	outline: 0;
+	background-color: limegreen;
+	width: 100%;
+	text-align: center;
+	padding: 12px;
+}
+.nav {
+	padding: 1.5em 0px 0.5em 0px;
+}
+.nav a {
+	display: inline-block; 
+	width: 50%; 
+	font-weight: 700;
+	filter:brightness(80%);
+	text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+	padding: 1em 0px;
+}
+@media screen and (min-width: 481px) {
+	.nav a  {width: 25%;}
+}
+.social i {
+	font-size: 1.5em;
+	filter:brightness(80%);
+	text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+	padding: 0px 1em 1em 1em;
+}
+
